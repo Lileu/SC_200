@@ -102,7 +102,9 @@ $('document').ready(function () {
             })
             .then(
                 (resp) => {
-                    console.log(resp)
+                    $('#user').text(resp.username)
+
+                    $('#avatar').html(`<img src="https://cdn.discordapp.com/avatars/${resp.id}/${resp.avatar}">`)
                 }
             )
 
