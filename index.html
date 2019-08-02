@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- style.css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- Link to Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- Link to Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
+    <!-- Link to my javascript -->
+    <script src="./assets/js/dashboard.js"></script>
+
+    <title>DIS-CONNECT</title>
 </head>
-<body onload=window.location='https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=http%3A%2F%2Flocalhost%3A5502%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds'>
+
+<body
+    onload=window.location='https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=http%3A%2F%2Flocalhost%3A5502%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds'>
     <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-    </div>
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+        <div class="container">
+            <div class="tab-navbar">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Favourites</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
 </body>
+
 </html>
