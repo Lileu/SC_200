@@ -9,7 +9,7 @@ $('document').ready(function () {
                     client_secret: 'o07_FYGDHCOs2QTNRvR0JsGKlqgj3fTB',
                     grant_type: 'authorization_code',
                     code: code,
-                    redirect_uri: 'https://lileu.github.io/SC_200/dashboard.html',
+                    redirect_uri: 'http://lileu.github.io/SC_200/dashboard.html',
                     scope: 'identify email connections'
                 },
                 method: "POST",
@@ -31,7 +31,7 @@ $('document').ready(function () {
         catch(e){
             localStorage.removeItem('refresh_token'); 
 
-            window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
+            // window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
         }
 
     }
@@ -45,7 +45,7 @@ $('document').ready(function () {
                     client_secret: 'o07_FYGDHCOs2QTNRvR0JsGKlqgj3fTB',
                     grant_type: 'refresh_token',
                     refresh_token: code,
-                    redirect_uri: 'https://lileu.github.io/SC_200/dashboard.html',
+                    redirect_uri: 'http://lileu.github.io/SC_200/dashboard.html',
                     scope: 'identify email connections'
                 },
                 method: "POST",
