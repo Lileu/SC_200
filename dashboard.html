@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dis-connect Dashboard</title>
+    <title>DIS-CONNECT</title>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -37,6 +37,11 @@
 <!-- navigation bar -->
     <div class="container">
         <div class="navbar-dashboard navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="" width="30" height="30" id="avatar"
+                    class="d-inline-block align-top" alt="">
+                    <span id="user"></span>
+            </a>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Search</a>
@@ -48,33 +53,45 @@
         </div>
         <br>
         <div class="searchbar">
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Genre
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a Genre
                 </button>
-                <div class="dropdown-menu genre-dropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <option value="1" class="dropdown-item" type="button">Action</option>
+                    <button value="2" class="dropdown-item" type="button">Strategy</button>
+                    <button value="3" class="dropdown-item" type="button">RPG</button>
+                    <button value="4" class="dropdown-item" type="button">Casual</button>
+                    <button value="9" class="dropdown-item" type="button">Racing</button>
+                    <button value="18" class="dropdown-item" type="button">Sports</button>
+                    <button value="25" class="dropdown-item" type="button">Adventure</button>
+                    <button value="28" class="dropdown-item" type="button">Stimulation</button>
+                    <button value="29" class="dropdown-item" type="button">Massively Multiplayer</button>
+                    <button value="37" class="dropdown-item" type="button">Free To Play</button>
                 </div>
-                <div class="btn-group">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Category
-                    </button>
-                    <div class="dropdown-menu category-dropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Role-Playing</a>
-                        <a class="dropdown-item" href="#">Simulation</a>
-                        <a class="dropdown-item" href="#">Strategy</a>
-                        <a class="dropdown-item" href="#">Sports</a>
-                        <a class="dropdown-item" href="#"></a>
-                    </div>
-                </div>
-                <button class="submit-buttom">Search!</button>
             </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button value="1" class="dropdown-item" type="button">Single Player</button>
+                    <button value="2" class="dropdown-item" type="button">Multi Player</button>
+                    <button value="9" class="dropdown-item" type="button">Co-op</button>
+                    <button value="20" class="dropdown-item" type="button">MMO</button>
+                    <button value="31" class="dropdown-item" type="button">VR Support</button>
+                    <button value="28" class="dropdown-item" type="button">Controller Support</button>
+                    <button value="27" class="dropdown-item" type="button">Cross Platform Support</button>
+                    <button value="36" class="dropdown-item" type="button">Online Multiplayer</button>
+                    <button value="37" class="dropdown-item" type="button">Local Multiplayer</button>
+                    <button value="29" class="dropdown-item" type="button">Steam Trading Cards</button>
+                </div>
+            </div>
+            <button class="submit-button">Search!</button>
         </div>
+    </div>
     </div>
 
     <!-- recommended games section -->
@@ -97,6 +114,17 @@
                     </div> 
         </div>
     </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 
