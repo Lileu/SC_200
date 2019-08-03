@@ -87,8 +87,14 @@ $('document').ready(function () {
     try {
         const code = localStorage.getItem("refresh_token");
         console.log(`Refresh Token : ${code}`)
-        refreshToken(code)
-
+        if(code !== null || code !== undefined){
+            refreshToken(code)
+        }
+        else{
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            fetchAccessToken(code)
+        }
     } catch (e){
         console.log(e)
         const urlParams = new URLSearchParams(window.location.search);
