@@ -89,6 +89,7 @@ $('document').ready(function () {
         console.log(`Refresh Token : ${code}`)
         if(code !== null || code !== undefined){
             refreshToken(code)
+            
         }
         else{
             const urlParams = new URLSearchParams(window.location.search);
