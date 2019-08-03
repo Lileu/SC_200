@@ -22,8 +22,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Link to my css -->
     <link rel="stylesheet" href="./assets/css/dashboard.css">
@@ -31,67 +30,123 @@
 </head>
 
 <body>
-<!-- navigation bar -->
-    <div class="container">
-        <div class="navbar-dashboard navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
-                <img src="" width="30" height="30" id="avatar" class="d-inline-block align-top" alt="">
-                <span id="user"></span>
-            </a>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Search</a>
+    <!-- navigation bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="" width="30" height="30" id="avatar" class="d-inline-block align-top rounded-circle" alt="">
+            <span id="user">Bluesamyou</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fa fa-search"></i> Search <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Favourites</a>
+                    <a class="nav-link" href="#"><i class="fa fa-bookmark"></i> Favourites</a>
                 </li>
             </ul>
         </div>
-        <br>
-        <div class="searchbar">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select a Genre
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button value="1" class="dropdown-item" type="button">Action</button>
-                    <button value="2" class="dropdown-item" type="button">Strategy</button>
-                    <button value="3" class="dropdown-item" type="button">RPG</button>
-                    <button value="4" class="dropdown-item" type="button">Casual</button>
-                    <button value="9" class="dropdown-item" type="button">Racing</button>
-                    <button value="18" class="dropdown-item" type="button">Sports</button>
-                    <button value="25" class="dropdown-item" type="button">Adventure</button>
-                    <button value="28" class="dropdown-item" type="button">Stimulation</button>
-                    <button value="29" class="dropdown-item" type="button">Massively Multiplayer</button>
-                    <button value="37" class="dropdown-item" type="button">Free To Play</button>
+    </nav>
+
+    <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6 selector">
+                    <label for="category-selector">Select a Category</label>
+                    <select class="form-control" id="category-selector">
+                        <option value="1">Multi-player</option>
+                        <option value="2">Single-player</option>
+                        <option value="6">Mods (require HL2)</option>
+                        <option value="8">Valve Anti-Cheat enabled</option>
+                        <option value="9">Co-op</option>
+                        <option value="13">Captions available</option>
+                        <option value="14">Commentary available</option>
+                        <option value="15">Stats</option>
+                        <option value="16">Includes Source SDK</option>
+                        <option value="17">Includes level editor</option>
+                        <option value="18">Partial Controller Support</option>
+                        <option value="19">Mods</option>
+                        <option value="20">MMO</option>
+                        <option value="22">Steam Achievements</option>
+                        <option value="23">Steam Cloud</option>
+                        <option value="24">Shared/Split Screen</option>
+                        <option value="25">Steam Leaderboards</option>
+                        <option value="27">Cross-Platform Multiplayer</option>
+                        <option value="28">Full controller support</option>
+                        <option value="29">Steam Trading Cards</option>
+                        <option value="30">Steam Workshop</option>
+                        <option value="31">VR Support</option>
+                        <option value="32">Steam Turn Notifications</option>
+                        <option value="33">Native Steam Controller Support</option>
+                        <option value="35">In-App Purchases</option>
+                        <option value="36">Online Multi-Player</option>
+                        <option value="37">Local Multi-Player</option>
+                        <option value="38">Online Co-op</option>
+                        <option value="39">Local Co-op</option>
+                        <option value="40">SteamVR Collectibles</option>
+                    </select>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select a Category
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button value="1" class="dropdown-item" type="button">Single Player</button>
-                    <button value="2" class="dropdown-item" type="button">Multi Player</button>
-                    <button value="9" class="dropdown-item" type="button">Co-op</button>
-                    <button value="20" class="dropdown-item" type="button">MMO</button>
-                    <button value="31" class="dropdown-item" type="button">VR Support</button>
-                    <button value="28" class="dropdown-item" type="button">Controller Support</button>
-                    <button value="27" class="dropdown-item" type="button">Cross Platform Support</button>
-                    <button value="36" class="dropdown-item" type="button">Online Multiplayer</button>
-                    <button value="37" class="dropdown-item" type="button">Local Multiplayer</button>
-                    <button value="29" class="dropdown-item" type="button">Steam Trading Cards</button>
+                <div class="col-6 selector">
+                    <label for="genre-selector">Select a genre</label>
+                    <select class="form-control" id="genre-selector">
+                        <option value="1">Action</option>
+                        <option value="2">Strategy</option>
+                        <option value="3">RPG</option>
+                        <option value="4">Casual</option>
+                        <option value="9">Racing</option>
+                        <option value="18">Sports</option>
+                        <option value="23">Indie</option>
+                        <option value="25">Adventure</option>
+                        <option value="28">Simulation</option>
+                        <option value="29">Massively Multiplayer</option>
+                        <option value="37">Free to Play</option>
+                        <option value="50">Accounting</option>
+                        <option value="51">Animation &amp; Modeling</option>
+                        <option value="52">Audio Production</option>
+                        <option value="53">Design &amp; Illustration</option>
+                        <option value="54">Education</option>
+                        <option value="55">Photo Editing</option>
+                        <option value="56">Software Training</option>
+                        <option value="57">Utilities</option>
+                        <option value="58">Video Production</option>
+                        <option value="59">Web Publishing</option>
+                        <option value="60">Game Development</option>
+                        <option value="70">Early Access</option>
+                        <option value="71">Sexual Content</option>
+                        <option value="72">Nudity</option>
+                        <option value="73">Violent</option>
+                        <option value="74">Gore</option>
+                        <option value="81">Documentary</option>
+                        <option value="84">Tutorial</option>
+                    </select>
+                    </select>
                 </div>
+
             </div>
-            <button class="submit-button">Search!</button>
+            <button type="submit" class="submit-button col-4 offset-4 col-sm-4 offset-sm-4">Suprise Me</button>
         </div>
-    </div>
+
     </div>
 
+    <div class="container">
+        <div class="card" id="hob">
+            <h2>Hob</h2> 
+        </div>
+        <div class="card" id="hob">
+            <h2>Hob</h2>
+        </div>
+        <div class="card" id="hob">
+            <h2>Hob</h2>
+        </div>
+    </div>
     <!-- recommended games section -->
-    <div id="cards-section" class="container">
+    <!-- <div id="cards-section" class="container">
         <div class="row">c
             <div class="card image-frame .col-md-3">
                 <i class="heart fa fa-heart-o"></i>
@@ -99,22 +154,20 @@
                     alt="gamename" class="card-img-top">
             </div>
             <div class="card image-frame .col-md-3">
-                    <i class="heart fa fa-heart-o"></i>
-                    <img src="https://steamcdn-a.akamaihd.net/steam/spotlights/385324d6b026084fa38c55e8/spotlight_image_english.jpg?t=1564674446"
-                        alt="gamename" class="card-img-top">
-                </div>
-                <div class="card image-frame .col-md-3">
-                        <i class="heart fa fa-heart-o"></i>
-                        <img src="https://steamcdn-a.akamaihd.net/steam/spotlights/385324d6b026084fa38c55e8/spotlight_image_english.jpg?t=1564674446"
-                            alt="gamename" class="card-img-top">
-                    </div> 
+                <i class="heart fa fa-heart-o"></i>
+                <img src="https://steamcdn-a.akamaihd.net/steam/spotlights/385324d6b026084fa38c55e8/spotlight_image_english.jpg?t=1564674446"
+                    alt="gamename" class="card-img-top">
+            </div>
+            <div class="card image-frame .col-md-3">
+                <i class="heart fa fa-heart-o"></i>
+                <img src="https://steamcdn-a.akamaihd.net/steam/spotlights/385324d6b026084fa38c55e8/spotlight_image_english.jpg?t=1564674446"
+                    alt="gamename" class="card-img-top">
+            </div>
         </div>
-    </div>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-    
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
