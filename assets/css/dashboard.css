@@ -1,7 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 
-.navbar-dashboard {
-    width: 100%;
+body{
+    color : white;
+    background : #151515;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar{
+   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+   margin-bottom : 20px;
+}
+
+.selector{
+    margin-bottom : 25px;
+}
+
+#category-selector, #genre-selector{
+    background : none;
+    color: white;
+    border: 2px solid orchid;
+    border-radius: 25px;
+}
+
+.submit-button {
+    background: none;
+    border: 2px solid greenyellow;
+    color: white; 
+    border-radius: 25px;
+}
+
+.card{
+    display: inline-block !important;
+    height: 12em;
+    width: 25%;
+    margin-right: 5%;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid pink;
+    box-shadow: 10px 10px 10px rgba(108, 99, 215, 0.3);
+}
+
+#hob {
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%) ,url('https://steamcdn-a.akamaihd.net/steam/apps/404680/header.jpg?t=1530207473')  center no-repeat;
 }
 
 
