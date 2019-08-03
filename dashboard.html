@@ -36,35 +36,40 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="assets/js/dashboard.js"></script>
     <div class="container">
-        <ul class="navbar navbar-dark bg-dark">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Username</a>
-            </li>
-        </ul>
+        <div class="navbar-dashboard">
+            <ul class="navbar navbar-dark bg-dark">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Username</a>
+                </li>
+            </ul>
+        </div>
         <br>
-        <div class="btn-group">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Genre
-            </button>
-            <div class="dropdown-menu genre-dropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+        <div class="searchbar">
             <div class="btn-group">
                 <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Category
+                    Genre
                 </button>
-                <div class="dropdown-menu category-dropdown">
+                <div class="dropdown-menu genre-dropdown">
                     <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Role-Playing</a>
-                    <a class="dropdown-item" href="#">Simulation</a>
-                    <a class="dropdown-item" href="#">Strategy</a>
-                    <a class="dropdown-item" href="#">Sports</a>
-                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
                 </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Category
+                    </button>
+                    <div class="dropdown-menu category-dropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Role-Playing</a>
+                        <a class="dropdown-item" href="#">Simulation</a>
+                        <a class="dropdown-item" href="#">Strategy</a>
+                        <a class="dropdown-item" href="#">Sports</a>
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </div>
+                <button class="submit-buttom">Search!</button>
             </div>
         </div>
     </div>
