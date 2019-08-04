@@ -9,11 +9,12 @@ $('document').ready(function () {
     var categoryVal = $('#category-selector').val();
     var genreVal = $('#genre-selector').val();
 
-    $('.card-display').empty().append(`<div class="d-flex justify-content-center">
-    <div class="spinner-border" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>`);
+    $('.card-display').empty()
+    .append(`<div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>`);
 
     $.ajax({
         url: `https://steam.cmandersen.com/apps?limit=9&random=1&category=${categoryVal}&genre=${genreVal}&free=0&_=${Date.now()}`,
