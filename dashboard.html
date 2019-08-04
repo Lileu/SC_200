@@ -22,7 +22,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Link to my css -->
     <link rel="stylesheet" href="./assets/css/dashboard.css">
@@ -93,7 +94,7 @@
                     </select>
                 </div>
                 <div class="col-6 selector">
-                    <label for="genre-selector">Select a genre</label>
+                    <label for="genre-selector">Select a Genre</label>
                     <select class="form-control" id="genre-selector">
                         <option value="1">Action</option>
                         <option value="2">Strategy</option>
@@ -129,24 +130,44 @@
                 </div>
 
             </div>
-            <button type="submit" class="submit-button col-4 offset-4 col-sm-4 offset-sm-4">Suprise Me</button>
+            <button type="submit" class="submit-button col-4 offset-4 col-sm-4 offset-sm-4">Surprise Me</button>
         </div>
 
     </div>
 
     <div class="container">
-        <div class="card" id="hob">
-            <h2>Hob</h2> 
-        </div>
-        <div class="card" id="hob">
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
             <h2>Hob</h2>
         </div>
-        <div class="card" id="hob">
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <h2>Hob</h2>
+        </div>
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
             <h2>Hob</h2>
         </div>
     </div>
-    <!-- recommended games section -->
-    <!-- <div id="cards-section" class="container">
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Game Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Steam Game summary:</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- recommended games section -->
+        <!-- <div id="cards-section" class="container">
         <div class="row">c
             <div class="card image-frame .col-md-3">
                 <i class="heart fa fa-heart-o"></i>
@@ -165,18 +186,18 @@
             </div>
         </div>
     </div> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 
-    <!-- Link to my javascript -->
-    <script src="./assets/js/dashboard.js"></script>
+        <!-- Link to my javascript -->
+        <script src="./assets/js/dashboard.js"></script>
 
 </body>
 
