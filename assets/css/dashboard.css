@@ -46,6 +46,7 @@ body {
     text-align: center;
     align-content: center;
     border: 2px solid white;
+    animation: appear 0.5s ease-in-out;
 }
 
 .card h5 {
@@ -56,6 +57,35 @@ body {
     border-radius: 25px 25px 0px 0px;
 }
 
+.card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
+    border-color: magenta;
+}
+
+@keyframes animate-hover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 @media only screen and (max-width: 480px) {
     .card {
         display: block;
