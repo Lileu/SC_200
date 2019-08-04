@@ -22,7 +22,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Link to my css -->
     <link rel="stylesheet" href="./assets/css/dashboard.css">
@@ -93,7 +94,7 @@
                     </select>
                 </div>
                 <div class="col-6 selector">
-                    <label for="genre-selector">Select a genre</label>
+                    <label for="genre-selector">Select a Genre</label>
                     <select class="form-control" id="genre-selector">
                         <option value="1">Action</option>
                         <option value="2">Strategy</option>
@@ -129,20 +130,30 @@
                 </div>
 
             </div>
-            <button type="submit" class="submit-button col-4 offset-4 col-sm-4 offset-sm-4">Suprise Me</button>
+            <button type="submit" class="submit-button col-4 offset-4 col-sm-4 offset-sm-4">Surprise Me</button>
         </div>
 
     </div>
 
     <div class="container">
-        <div class="card" id="hob">
-            <h2>Hob</h2> 
-        </div>
-        <div class="card" id="hob">
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
             <h2>Hob</h2>
         </div>
-        <div class="card" id="hob">
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
             <h2>Hob</h2>
+        </div>
+        <div class="card" id="hob" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <h2>Hob</h2>
+        </div>
+    </div>
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
         </div>
     </div>
     <!-- recommended games section -->
