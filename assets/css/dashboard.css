@@ -30,8 +30,9 @@ body {
     color: white;
     border-radius: 25px;
 }
-.card-display{
-    margin-left : 10%
+
+.card-display {
+    margin-left: 10%
 }
 
 .card {
@@ -47,12 +48,30 @@ body {
     border: 2px solid white;
 }
 
-.card h5{
+.card h5 {
     margin: 0;
-    font-size : 80%;
-    background-image: linear-gradient(180deg, rgba(0,0,0,9) 0%, rgba(0,0,0,0.7)  100%);
-    padding : 20px 0; 
-    border-radius : 25px 25px 0px 0px;
+    font-size: 80%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 9) 0%, rgba(0, 0, 0, 0.7) 100%);
+    padding: 20px 0;
+    border-radius: 25px 25px 0px 0px;
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        display: block;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 840px) {
+    .card-display {
+        margin-left: 5%;
+    }
+    
+    .card {
+        display: inline-flex;
+        width: 45%;
+    }
 }
 
 
