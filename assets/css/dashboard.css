@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 
-body{
-    color : white;
-    background : #151515;
+body {
+    color: white;
+    background: #151515;
     font-family: 'Nunito', sans-serif;
 }
 
-.navbar{
-   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-   margin-bottom : 20px;
+.navbar {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    margin-bottom: 20px;
 }
 
-.selector{
-    margin-bottom : 25px;
+.selector {
+    margin-bottom: 25px;
 }
 
-#category-selector, #genre-selector{
-    background : none;
+#category-selector,
+#genre-selector {
+    background: none;
     color: white;
     border: 2px solid orchid;
     border-radius: 25px;
@@ -26,11 +27,11 @@ body{
 .submit-button {
     background: none;
     border: 2px solid greenyellow;
-    color: white; 
+    color: white;
     border-radius: 25px;
 }
 
-.card{
+.card {
     display: inline-block !important;
     height: 12em;
     width: 25%;
@@ -43,22 +44,22 @@ body{
 }
 
 #hob {
-    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%) ,url('https://steamcdn-a.akamaihd.net/steam/apps/404680/header.jpg?t=1530207473')  center no-repeat;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url('https://steamcdn-a.akamaihd.net/steam/apps/404680/header.jpg?t=1530207473') center no-repeat;
 }
 
 
 /* card section styling */
 .heart {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 25px;
-  color:red;
-  z-index: 1;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 25px;
+    color: red;
+    z-index: 1;
 }
 
 .image-frame {
-    position: relative 
+    position: relative
 }
 
 #cards-section {
@@ -66,7 +67,7 @@ body{
 }
 
 .card {
-display: block;
+    display: block;
 }
 
 /* .overlay {
@@ -75,3 +76,12 @@ display: block;
     right: 0px;
     border-top: 50px solid #000000;
     border-left: 50px solid transparent; */
+
+/* Modal */
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    color: black;
+}
