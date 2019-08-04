@@ -42,10 +42,11 @@ body {
     margin-top: 2.5%;
     margin-right: 5%;
     margin-bottom: 2.5%;
-    border-radius: 25px;
+    border-radius: 5px;
     text-align: center;
     align-content: center;
     border: 2px solid white;
+    animation: appear 0.5s ease-in-out;
 }
 
 .card h5 {
@@ -53,9 +54,38 @@ body {
     font-size: 80%;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 9) 0%, rgba(0, 0, 0, 0.7) 100%);
     padding: 20px 0;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 }
 
+.card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
+    border-color: magenta;
+}
+
+@keyframes animate-hover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 @media only screen and (max-width: 480px) {
     .card {
         display: block;
