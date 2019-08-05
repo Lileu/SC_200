@@ -24,6 +24,12 @@ body {
     border-radius: 25px;
 }
 
+
+option {
+    background-color: black;
+    border-radius: 25px;
+}
+
 .submit-button {
     background: none;
     border: 2px solid greenyellow;

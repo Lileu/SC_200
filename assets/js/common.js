@@ -11,12 +11,15 @@ $('document').ready(function () {
     $(this).children('i').addClass('heart-anim')
   });
 
-  //LISA ADD SHIT HERE
+  // 
   $('.card-display').on('tap','.card', function(){
-    $(this).children('i').addClass('heart-anim')
+    $(this).children('i').addClass('card')
   });
   $('.card-display').on('click','.card', function(){
-    $(this).children('i').addClass('heart-anim')
+    $(this).children('i').attr({
+      'data-toggle':'modal',
+      'data-target':'.bd-example-modal-lg'
+    })
   });
 
 
