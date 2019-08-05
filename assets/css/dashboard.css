@@ -35,6 +35,17 @@ body {
     margin-left: 10%
 }
 
+.fa-heart{
+    color: rgba(145, 0, 0);
+    opacity: 0;
+    font-size : 125px;
+}
+
+.heart-anim{
+    opacity: 0.5;
+    animation: heart-animation 0.5s ease-in-out;
+}
+
 .card {
     display: inline-flex !important;
     height: 12em;
@@ -46,7 +57,7 @@ body {
     text-align: center;
     align-content: center;
     border: 2px solid white;
-    animation: appear 0.5s ease-in-out;
+    animation: appear 0.5s ease-in-out 1;
 }
 
 .card h5 {
@@ -58,9 +69,25 @@ body {
 }
 
 .card:hover {
-    transform: translate(-10px, -10px);
+    transform : scale(1.2);
     box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
     border-color: magenta;
+    animation: animate-hover 0.5s ease-in-out;
+}
+
+@keyframes heart-animation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
 }
 
 @keyframes animate-hover {
@@ -74,15 +101,10 @@ body {
 
 @keyframes appear {
     0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1.5);
+
+        transform: scale(1.2);
     }
     100% {
-        opacity: 1;
         transform: scale(1);
     }
 }
