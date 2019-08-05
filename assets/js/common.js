@@ -11,9 +11,11 @@ $('document').ready(function () {
     $(this).children('i').addClass('heart-anim')
   });
 
-  // 
   $('.card-display').on('tap','.card', function(){
-    $(this).children('i').addClass('card')
+    $(this).children('i').attr({
+      'data-toggle':'modal',
+      'data-target':'.bd-example-modal-lg'
+    })
   });
   $('.card-display').on('click','.card', function(){
     $(this).children('i').attr({
@@ -45,7 +47,8 @@ $('document').ready(function () {
         console.log(resp)
         if (resp.length !== 0) {
           resp.forEach((card, index) => {
-            console.log(card.image)
+            state.games.push(card);
+
             var appendCard = $('<div>').attr({
                 class: 'card',
                 value: index,
