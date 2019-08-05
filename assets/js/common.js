@@ -4,23 +4,23 @@ var state = {
 
 $('document').ready(function () {
 
-  $('.card-display').on('doubleTap','.card', function(){
+  $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim')
   });
-  $('.card-display').on('dblclick','.card', function(){
+  $('.card-display').on('dblclick', '.card', function () {
     $(this).children('i').addClass('heart-anim')
   });
 
-  $('.card-display').on('tap','.card', function(){
+  $('.card-display').on('tap', '.card', function () {
     $(this).children('i').attr({
-      'data-toggle':'modal',
-      'data-target':'.bd-example-modal-lg'
+      'data-toggle': 'modal',
+      'data-target': '.bd-example-modal-lg'
     })
   });
-  $('.card-display').on('click','.card', function(){
+  $('.card-display').on('click', '.card', function () {
     $(this).children('i').attr({
-      'data-toggle':'modal',
-      'data-target':'.bd-example-modal-lg'
+      'data-toggle': 'modal',
+      'data-target': '.bd-example-modal-lg'
     })
   });
 
@@ -32,7 +32,7 @@ $('document').ready(function () {
     var genreVal = $('#genre-selector').val();
 
     $('.card-display').empty()
-    .append(`<div class="d-flex justify-content-center">
+      .append(`<div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
@@ -42,7 +42,7 @@ $('document').ready(function () {
         url: `https://steam.cmandersen.com/apps?limit=9&random=1&category=${categoryVal}&genre=${genreVal}&free=0&_=${Date.now()}`,
         method: 'GET'
       })
-      .then(function(resp){
+      .then(function (resp) {
         $('.card-display').empty()
         console.log(resp)
         if (resp.length !== 0) {
@@ -60,11 +60,14 @@ $('document').ready(function () {
                 'background-image': `url('${card.image}')`
               })
 
-            $('.card-display').append(appendCard)
+            $('.card-display').append(appendCard);
+            console.log(card.name);
+            $(".modal-title").append(card.name);
+            $(".modal-summary").append(card.description);
           })
         }
       })
-      .fail(function(error){
+      .fail(function (error) {
         alert(error);
       })
   })
