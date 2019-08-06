@@ -1,3 +1,7 @@
+var user = {
+    email : "testemail@gmail.com"
+}
+
 $('document').ready(function () {
 
     var fetchAccessToken = function (code) {
@@ -121,7 +125,11 @@ $('document').ready(function () {
                     $('#avatar').attr({
                         src: `https://cdn.discordapp.com/avatars/${resp.id}/${resp.avatar}`
                     })
+
+
+                user = resp;
                 }
+
             )
 
 
