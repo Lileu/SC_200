@@ -24,46 +24,49 @@ $('document').ready(function () {
 
   console.log(user)
 
-  $('.card-display').on('doubleTap','.card', function(){
+  $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim');
 
     var gameRef = state.games[$(this).attr('value')]
     console.log(gameRef);
-    var id = gameRef.id;  
-    var name = gameRef.name; 
-    var price = gameRef.price; 
-    var image = gameRef.image; 
-    var desc = gameRef.description; 
+    var id = gameRef.id;
+    var name = gameRef.name;
+    var price = gameRef.price;
+    var image = gameRef.image;
+    var desc = gameRef.description;
     var release_date = gameRef.release_date;
 
     setObject = {
-      name : name, 
-      price : price , 
-      image : image, 
-      desc : desc, 
-      release_date : release_date
-      }
+      name: name,
+      price: price,
+      image: image,
+      desc: desc,
+      release_date: release_date
+    }
 
     database.ref(`${user.email.replace('@','').replace('.','')}/favourites/${id}`).set(setObject);
-                                                    
+
   });
-  $('.card-display').on('dblclick','.card', function(){
+  $('.card-display').on('dblclick', '.card', function () {
     $(this).children('i').addClass('heart-anim');
   });
 
-  // $('.card-display').on('tap','.card', function(){
-  //   $(this).children('i').attr({
-  //     'data-toggle':'modal',
-  //     'data-target':'.bd-example-modal-lg'
-  //   })
-  // });
-  // $('.card-display').on('click','.card', function(){
-  //   $(this).children('i').attr({
-  //     'data-toggle':'modal',
-  //     'data-target':'.bd-example-modal-lg'
-  //   })
-  // });
+  $('.card-display').on('tap', '.card', function () {
+    $(this).children('i').attr({
+      'data-toggle': 'modal',
+      'data-target': '.bd-example-modal-lg'
+    })
+  });
 
+  $('.card-display').on('click', '.card', function () {
+    $(this).children('i').attr({
+      'data-toggle': 'modal',
+      'data-target': '.bd-example-modal-lg'
+    });
+    $(".modal-title").html(state.games[$(this).attr("value")].name);
+    $(".modal-summary").html(state.games[$(this).attr("value")].description_long);
+
+  });
 
   $('.submit-button').on('click', function (e) {
     e.preventDefault();
@@ -96,11 +99,11 @@ $('document').ready(function () {
                 'background-image': `url('${card.image}')`
               })
 
-            $('.card-display').append(appendCard)
+            $('.card-display').append(appendCard);
           })
         }
       })
-      .fail(function(error){
+      .fail(function (error) {
         alert(error);
       })
   })
