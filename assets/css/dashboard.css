@@ -182,7 +182,7 @@ option {
     border-left: 50px solid transparent; */
 
 /* Modal */
-.modal-title {
+/* .modal-title {
     color: black;
 }
 
@@ -192,7 +192,7 @@ option {
     height: 12em;
     width: 25%;
    
-}
+} */
 
 .modal-content {
     background-color: black;
@@ -204,6 +204,20 @@ option {
     text-align: center;
     align-content: center;
     border: 2px solid white;
+    position: relative;
+    flex-direction: column; 
+    padding: 25px;
+}
 
 
+span {
+    color: white;
+}
+
+h2 {
+    color: magenta;
+}
+
+.modal-title    {
+    text-align: center;
 }
