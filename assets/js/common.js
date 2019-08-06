@@ -4,6 +4,8 @@ var state = {
 
 $('document').ready(function () {
 
+  $('.preloader').hide()
+
     // Your web app's Firebase configuration
     var firebaseConfig = {
       apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
@@ -69,18 +71,14 @@ $('document').ready(function () {
     var categoryVal = $('#category-selector').val();
     var genreVal = $('#genre-selector').val();
 
-    $('.card-display').empty()
-    .append(`<div class="d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-            </div>`);
+    $('.preloader').show()
 
     $.ajax({
         url: `https://steam.cmandersen.com/apps?limit=9&random=1&category=${categoryVal}&genre=${genreVal}&free=0&_=${Date.now()}`,
         method: 'GET'
       })
       .then(function(resp){
+        $('.preloader').hide()
         $('.card-display').empty()
         console.log(resp)
         if (resp.length !== 0) {
