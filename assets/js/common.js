@@ -4,21 +4,23 @@ var state = {
 
 $('document').ready(function () {
 
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
-    authDomain: "dis-connect.firebaseapp.com",
-    databaseURL: "https://dis-connect.firebaseio.com",
-    projectId: "dis-connect",
-    storageBucket: "",
-    messagingSenderId: "25885376183",
-    appId: "1:25885376183:web:d3e09c857764dc9d"
-  };
+  $('.preloader').hide()
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
+      authDomain: "dis-connect.firebaseapp.com",
+      databaseURL: "https://dis-connect.firebaseio.com",
+      projectId: "dis-connect",
+      storageBucket: "",
+      messagingSenderId: "25885376183",
+      appId: "1:25885376183:web:d3e09c857764dc9d"
+    };
 
-  var database = firebase.database();
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var database = firebase.database();
 
   console.log(user)
 
@@ -72,18 +74,14 @@ $('document').ready(function () {
     var categoryVal = $('#category-selector').val();
     var genreVal = $('#genre-selector').val();
 
-    $('.card-display').empty()
-      .append(`<div class="d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-            </div>`);
+    $('.preloader').show()
 
     $.ajax({
         url: `https://steam.cmandersen.com/apps?limit=9&random=1&category=${categoryVal}&genre=${genreVal}&free=0&_=${Date.now()}`,
         method: 'GET'
       })
-      .then(function (resp) {
+      .then(function(resp){
+        $('.preloader').hide()
         $('.card-display').empty()
         console.log(resp)
         if (resp.length !== 0) {
