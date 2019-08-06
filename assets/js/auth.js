@@ -1,5 +1,4 @@
 var user = {
-    email : "testemail@gmail.com"
 }
 
 $('document').ready(function () {
