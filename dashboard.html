@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DIS-CONNECT</title>
 
@@ -32,7 +32,9 @@
 
 <body>
     <!-- navigation bar -->
-
+    <div class="preloader">
+        <img src="./assets/images/pacman.svg" alt="">
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="" width="30" height="30" id="avatar" class="d-inline-block align-top rounded-circle" alt="">
@@ -159,13 +161,13 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Game Name</h5>
+                    <h5 class="modal-title"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-summary">
-                    <p>Steam Game summary:</p>
+                <div class="modal-body">
+                    <p class="modal-summary"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
