@@ -54,13 +54,13 @@ option {
     margin-left: 10%
 }
 
-.fa-heart{
+.fa-heart {
     color: rgba(145, 0, 0);
     opacity: 0;
-    font-size : 125px;
+    font-size: 125px;
 }
 
-.heart-anim{
+.heart-anim {
     opacity: 0.5;
     animation: heart-animation 0.5s ease-in-out;
 }
@@ -88,8 +88,8 @@ option {
 }
 
 .card:hover {
-    transform : scale(1.2);
-    box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
+    transform: scale(1.2);
+    box-shadow: 10px 10px 20px rgba(117, 78, 166, 0.7);
     border-color: magenta;
     animation: animate-hover 0.5s ease-in-out;
 }
@@ -99,10 +99,12 @@ option {
         opacity: 0;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.2);
     }
+
     100% {
         opacity: 0.5;
         transform: scale(1);
@@ -113,6 +115,7 @@ option {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.2);
     }
@@ -123,10 +126,12 @@ option {
 
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
 }
+
 @media only screen and (max-width: 480px) {
     .card {
         display: block;
@@ -138,7 +143,7 @@ option {
     .card-display {
         margin-left: 5%;
     }
-    
+
     .card {
         display: inline-flex;
         width: 45%;
@@ -183,4 +188,22 @@ option {
 
 .modal-body {
     color: black;
+    display: inline-flex !important;
+    height: 12em;
+    width: 25%;
+   
+}
+
+.modal-content {
+    background-color: black;
+    text-align: center;
+    margin-top: 2.5%;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    border: 2px solid white;
+
+
 }
