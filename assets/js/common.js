@@ -49,18 +49,18 @@ $('document').ready(function () {
     $(this).children('i').addClass('heart-anim');
   });
 
-  // $('.card-display').on('tap','.card', function(){
-  //   $(this).children('i').attr({
-  //     'data-toggle':'modal',
-  //     'data-target':'.bd-example-modal-lg'
-  //   })
-  // });
-  // $('.card-display').on('click','.card', function(){
-  //   $(this).children('i').attr({
-  //     'data-toggle':'modal',
-  //     'data-target':'.bd-example-modal-lg'
-  //   })
-  // });
+  $('.card-display').on('tap','.card', function(){
+    $(this).children('i').attr({
+      'data-toggle':'modal',
+      'data-target':'.bd-example-modal-lg'
+    })
+  });
+  $('.card-display').on('click','.card', function(){
+    $(this).children('i').attr({
+      'data-toggle':'modal',
+      'data-target':'.bd-example-modal-lg'
+    })
+  });
 
 
   $('.submit-button').on('click', function (e) {
