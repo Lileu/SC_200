@@ -4,6 +4,7 @@ $('document').ready(function () {
 
     if(localStorage.getItem('user') !== undefined){
         user = localStorage.getItem('user')
+        
     }
     else{
         const urlParams = new URLSearchParams(window.location.search);
