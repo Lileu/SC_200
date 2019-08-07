@@ -22,8 +22,6 @@ $('document').ready(function () {
 
     var database = firebase.database();
 
-  console.log(user)
-
   $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim');
 
@@ -92,6 +90,8 @@ $('document').ready(function () {
   $('.submit-button').on('click', function (e) {
     e.preventDefault();
 
+    state.games = [];
+
     var categoryVal = $('#category-selector').val();
     var genreVal = $('#genre-selector').val();
 
@@ -107,6 +107,7 @@ $('document').ready(function () {
         console.log(resp)
         if (resp.length !== 0) {
           resp.forEach((card, index) => {
+            
             state.games.push(card);
 
             var appendCard = $('<div>').attr({
