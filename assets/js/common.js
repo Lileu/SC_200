@@ -22,8 +22,6 @@ $('document').ready(function () {
 
     var database = firebase.database();
 
-  console.log(user)
-
   $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim');
 

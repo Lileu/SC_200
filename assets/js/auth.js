@@ -136,6 +136,9 @@ $('document').ready(function () {
 
 
                     user = resp;
+
+                    localStorage.setItem('user', JSON.stringify(user));
+
                 }
 
             )
