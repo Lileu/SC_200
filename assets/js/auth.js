@@ -1,7 +1,7 @@
 var user = {}
 
 $('document').ready(function () {
-
+    
     //This is the old code
     var fetchAccessToken = function (code) {
         $.ajax({
@@ -38,10 +38,11 @@ $('document').ready(function () {
 
     }
 
-    if (localStorage.getItem('user') !== null) {
-        user = localStorage.getItem('user')
-
-    } else {
+    if(localStorage.getItem('user') !== null ){
+        user = JSON.parse(localStorage.getItem('user'));
+        
+    }
+    else{
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
         fetchAccessToken(code);
@@ -70,9 +71,7 @@ $('document').ready(function () {
 
                     user = resp;
 
-                    var saveItem = JSON.stringify(resp)
-
-                    localStorage.setItem('user', saveItem);
+                    localStorage.setItem('user', JSON.stringify(resp));
 
                 }
 
