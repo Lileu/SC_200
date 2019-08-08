@@ -22,8 +22,6 @@ $('document').ready(function () {
 
     var database = firebase.database();
 
-  console.log(user)
-
   $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim');
 
@@ -47,8 +45,29 @@ $('document').ready(function () {
     database.ref(`${user.email.replace('@','').replace('.','')}/favourites/${id}`).set(setObject);
 
   });
+
   $('.card-display').on('dblclick', '.card', function () {
     $(this).children('i').addClass('heart-anim');
+
+    var gameRef = state.games[$(this).attr('value')]
+    console.log(gameRef);
+    var id = gameRef.id;
+    var name = gameRef.name;
+    var price = gameRef.price;
+    var image = gameRef.image;
+    var desc = gameRef.description;
+    var release_date = gameRef.release_date;
+
+    setObject = {
+      name: name,
+      price: price,
+      image: image,
+      desc: desc,
+      release_date: release_date
+    }
+
+    database.ref(`${user.email.replace('@','').replace('.','')}/favourites/${id}`).set(setObject);
+
   });
 
   $('.card-display').on('tap', '.card', function () {

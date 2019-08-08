@@ -9,7 +9,7 @@ $('document').ready(function () {
     else{
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
-        fetchAccessToken(code)
+        fetchAccessToken(code);
     }
 
     
@@ -137,6 +137,9 @@ $('document').ready(function () {
 
 
                     user = resp;
+
+                    localStorage.setItem('user', JSON.stringify(user));
+
                 }
 
             )
