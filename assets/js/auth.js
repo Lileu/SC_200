@@ -1,7 +1,7 @@
 var user = {}
 
 $('document').ready(function () {
-    
+
     //This is the old code
     var fetchAccessToken = function (code) {
         $.ajax({
@@ -38,11 +38,10 @@ $('document').ready(function () {
 
     }
 
-    if(localStorage.getItem('user') !== null ){
+    if (localStorage.getItem('user') !== null) {
         user = localStorage.getItem('user')
-        
-    }
-    else{
+
+    } else {
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
         fetchAccessToken(code);
