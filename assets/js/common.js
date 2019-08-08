@@ -6,21 +6,21 @@ $('document').ready(function () {
 
   $('.preloader').hide()
 
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
-      authDomain: "dis-connect.firebaseapp.com",
-      databaseURL: "https://dis-connect.firebaseio.com",
-      projectId: "dis-connect",
-      storageBucket: "",
-      messagingSenderId: "25885376183",
-      appId: "1:25885376183:web:d3e09c857764dc9d"
-    };
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
+    authDomain: "dis-connect.firebaseapp.com",
+    databaseURL: "https://dis-connect.firebaseio.com",
+    projectId: "dis-connect",
+    storageBucket: "",
+    messagingSenderId: "25885376183",
+    appId: "1:25885376183:web:d3e09c857764dc9d"
+  };
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-    var database = firebase.database();
+  var database = firebase.database();
 
   $('.card-display').on('doubleTap', '.card', function () {
     $(this).children('i').addClass('heart-anim');
@@ -87,7 +87,7 @@ $('document').ready(function () {
 
   });
 
-  $('.logout-button').on('click', function(){
+  $('.logout-button').on('click', function () {
     localStorage.removeItem('user');
     window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
 
@@ -107,13 +107,13 @@ $('document').ready(function () {
         url: `https://steam.cmandersen.com/apps?limit=9&random=1&category=${categoryVal}&genre=${genreVal}&free=0&_=${Date.now()}`,
         method: 'GET'
       })
-      .then(function(resp){
+      .then(function (resp) {
         $('.preloader').hide()
         $('.card-display').empty()
         console.log(resp)
         if (resp.length !== 0) {
           resp.forEach((card, index) => {
-            
+
             state.games.push(card);
 
             var appendCard = $('<div>').attr({
