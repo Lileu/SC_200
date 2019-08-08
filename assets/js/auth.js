@@ -70,7 +70,7 @@ $('document').ready(function () {
 
                     user = resp;
 
-                    localStorage.setItem('user', JSON.stringify(user));
+                    localStorage.setItem('user', JSON.stringify(resp));
 
                 }
 
