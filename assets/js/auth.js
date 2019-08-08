@@ -1,17 +1,6 @@
 var user = {}
 
 $('document').ready(function () {
-
-    if(localStorage.getItem('user') !== undefined){
-        user = localStorage.getItem('user')
-        
-    }
-    else{
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        fetchAccessToken(code);
-    }
-
     
     //This is the old code
     var fetchAccessToken = function (code) {
@@ -34,7 +23,7 @@ $('document').ready(function () {
             })
             .then((resp) => {
                 if (resp.error === "invalid_grant") {
-                    alert("This should not happend but Shevi can fix it")
+                    window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
                 }
                 localStorage.setItem("refresh_token", resp.refresh_token);
 
@@ -42,78 +31,22 @@ $('document').ready(function () {
             })
             .fail(function (e) {
                 console.log(e)
-                localStorage.removeItem('refresh_token');
+                localStorage.removeItem('user');
                 window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
             })
 
 
     }
 
-    // var refreshToken = function (code) {
-    //     try {
-    //         $.ajax({
-    //                 url: "https://discordapp.com/api/v6/oauth2/token",
-    //                 data: {
-    //                     client_id: '570810906079133728',
-    //                     client_secret: 'o07_FYGDHCOs2QTNRvR0JsGKlqgj3fTB',
-    //                     grant_type: 'refresh_token',
-    //                     refresh_token: code,
-    //                     redirect_uri: 'https://lileu.github.io/SC_200/dashboard.html',
-    //                     scope: 'identify email connections'
-    //                 },
-    //                 method: "POST",
-    //                 headers: {
-    //                     'Content-Type': 'application/x-www-form-urlencoded'
-    //                 }
-
-
-    //             })
-    //             .then((resp) => {
-    //                 if (resp.error === "invalid_grant") {
-    //                     const urlParams = new URLSearchParams(window.location.search);
-    //                     const code = urlParams.get('code');
-    //                     fetchAccessToken(code)
-    //                 }
-    //                 console.log(JSON.stringify(resp))
-
-    //                 localStorage.setItem("refresh_token", resp.refresh_token);
-
-    //                 fetchuser(resp.access_token)
-    //             })
-
-    //             .fail(() => {
-    //                     const urlParams = new URLSearchParams(window.location.search);
-    //                     const code = urlParams.get('code');
-    //                     fetchAccessToken(code)
-    //                 }
-
-    //             )
-    //     } catch (e) {
-    //         const urlParams = new URLSearchParams(window.location.search);
-    //         const code = urlParams.get('code');
-    //         fetchAccessToken(code)
-    //     }
-    // }
-
-
-    // try {
-    //     const code = localStorage.getItem("refresh_token");
-    //     console.log(`Refresh Token : ${code}`)
-    //     if (code !== null || code !== undefined) {
-    //         refreshToken(code)
-
-    //     } else {
-    //         const urlParams = new URLSearchParams(window.location.search);
-    //         const code = urlParams.get('code');
-    //         fetchAccessToken(code)
-    //     }
-    // } catch (e) {
-    //     console.log(e)
-    //     const urlParams = new URLSearchParams(window.location.search);
-    //     const code = urlParams.get('code');
-    //     fetchAccessToken(code)
-    // }
-
+    if(localStorage.getItem('user') !== null ){
+        user = localStorage.getItem('user')
+        
+    }
+    else{
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        fetchAccessToken(code);
+    }
 
     var fetchuser = function (access_token) {
 
