@@ -47,6 +47,25 @@ $('document').ready(function () {
   });
   $('.card-display').on('dblclick', '.card', function () {
     $(this).children('i').addClass('heart-anim');
+
+    var gameRef = state.games[$(this).attr('value')]
+    console.log(gameRef);
+    var id = gameRef.id;
+    var name = gameRef.name;
+    var price = gameRef.price;
+    var image = gameRef.image;
+    var desc = gameRef.description;
+    var release_date = gameRef.release_date;
+
+    setObject = {
+      name: name,
+      price: price,
+      image: image,
+      desc: desc,
+      release_date: release_date
+    }
+
+    database.ref(`${user.email.replace('@','').replace('.','')}/favourites/${id}`).set(setObject);
   });
 
   $('.card-display').on('tap', '.card', function () {
@@ -65,6 +84,14 @@ $('document').ready(function () {
     $(".modal-summary").html(state.games[$(this).attr("value")].description_long);
 
   });
+
+  $('.logout-button').on('click', function(e){
+    e.preventDefault();
+
+    localStorage.removeItem('user');
+
+    window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
+  })
 
   $('.submit-button').on('click', function (e) {
     e.preventDefault();

@@ -25,6 +25,18 @@ body {
     margin-bottom: 20px;
 }
 
+.logout-button {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    color : white;
+    border: 2px solid red; 
+    border-radius : 25px;
+    background:  none;
+    padding: 5px 20px;
+    margin: 0 auto;
+}
+
 .selector {
     margin-bottom: 25px;
 }
@@ -147,6 +159,19 @@ option {
     .card {
         display: inline-flex;
         width: 45%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .logout-button {
+        display: flex;
+        position: static;
+        color : white;
+        border: 2px solid red; 
+        border-radius : 25px;
+        background:  none;
+        padding: 5px 20px;
+        text-align: center;
     }
 }
 

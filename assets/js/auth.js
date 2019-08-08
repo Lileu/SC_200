@@ -2,7 +2,8 @@ var user = {}
 
 $('document').ready(function () {
 
-    if(localStorage.getItem('user') !== undefined){
+    if(localStorage.getItem('user') != undefined || localStorage.getItem('user') != 'null'){
+        console.log(localStorage.getItem('user'))
         user = localStorage.getItem('user')
     }
     else{
@@ -33,7 +34,9 @@ $('document').ready(function () {
             })
             .then((resp) => {
                 if (resp.error === "invalid_grant") {
-                    alert("This should not happend but Shevi can fix it")
+                    localStorage.removeItem('user');
+                    window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
+    
                 }
                 localStorage.setItem("refresh_token", resp.refresh_token);
 
@@ -41,7 +44,7 @@ $('document').ready(function () {
             })
             .fail(function (e) {
                 console.log(e)
-                localStorage.removeItem('refresh_token');
+                localStorage.removeItem('user');
                 window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
             })
 
