@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+
+body {
+    color: white;
+    background: #151515;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    margin-bottom: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+
+/* card section styling */
+
+.card {
+    display: inline-flex !important;
+    height: auto;
+    width: 100%;
+    margin-top: 2.5%;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    text-align: left;
+    align-content: left;
+    border: 2px solid white;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 9) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.card:hover {
+    box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
+    border-color: magenta;
+}
+
+.image-frame {
+    position: relative
+}
+
+#cards-section {
+    display: block;
+}
+
+.card {
+    display: block;
+}
+
+.card-body {
+    position: relative;
+}
+
+#card-bookmark {
+    float: right;
+    margin-top: 10%;
+    margin-right: 12.5%;
+}

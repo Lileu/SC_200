@@ -26,7 +26,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Link to my css -->
-    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./assets/css/favourites.css">
 
 </head>
 
@@ -56,6 +56,36 @@
             </ul>
         </div>
     </nav>
+
+  <!-- favourites section - data to populate from firebase -->
+  <div id="faves-section" class="container">
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/672040/header.jpg?t=1562319158"
+                    class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">name</h5>
+                    <p class="card-text description">description</p>
+                    <p class="card-text release_date">release date</p>
+
+                </div>
+            </div>
+            <div class="col-md-1">
+                <i id="card-bookmark" class="fa fa-bookmark"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 </body>
 
 </html>
