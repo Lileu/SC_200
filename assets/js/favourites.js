@@ -40,30 +40,22 @@ $('document').ready(function () {
         ` <div class="card mb-3">
           <div class="row no-gutters">
               <div class="col-md-3">
-                  <img src="${image}"
-                      class="card-img" alt="...">
+                  <img src="${image}" class="card-img" alt="${image}+image">
               </div>
               <div class="col-md-9">
                   <div class="card-body">
                       <h5 class="card-title">${name}</h5>
                       <p class="card-text price">${price}</p>
                       <p class="card-text release_date">${release_date}</p>
-
                   </div>
-              </div>
-                              
+              </div>            
               </div>
           </div>
       </div>`)
     }
 
-
-
     $('#faves-section').append(appendFave);
   });
 
 
-})
-
-
-;
+});
