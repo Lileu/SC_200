@@ -71,7 +71,9 @@ $('document').ready(function () {
 
                     user = resp;
 
-                    localStorage.setItem('user', JSON.stringify(resp));
+                    var saveItem = JSON.stringify(resp)
+
+                    localStorage.setItem('user', saveItem);
 
                 }
 
