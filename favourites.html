@@ -7,16 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DIS-CONNECT - Favourites</title>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-    <!-- Link to Firebase App -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-
-    <!-- Link to Firebase Database -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -51,38 +41,31 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#"><i class="fa fa-bookmark"></i> Favourites <span
-                        class="sr-only">(current)</span></a>
+                            class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
 
-  <!-- favourites section - data to populate from firebase -->
-  <div id="faves-section" class="container">
-    <div class="card mb-3">
-        <div class="row no-gutters">
-            <div class="col-md-3">
-                <img src="https://steamcdn-a.akamaihd.net/steam/apps/672040/header.jpg?t=1562319158"
-                    class="card-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">name</h5>
-                    <p class="card-text description">description</p>
-                    <p class="card-text release_date">release date</p>
-
-                </div>
-            </div>
-            <div class="col-md-1">
-                <i id="card-bookmark" class="fa fa-bookmark"></i>
-            </div>
-        </div>
+    <!-- favourites section - data to populate from firebase -->
+    <div id="faves-section" class="container">
     </div>
-</div>
 
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
+    <!-- Link to Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
+    <!-- Link to Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
+    <!-- Custom Authentication JS -->
+    <script src="./assets/js/auth.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/favourites.js"></script>
 
 
 
