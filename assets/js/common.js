@@ -116,8 +116,6 @@ $('document').ready(function () {
 
             state.games.push(card);
 
-            <div class="card" id=""></div>
-
             var appendCard = $('<div>').attr({
                 class: 'card',
                 value: index,
