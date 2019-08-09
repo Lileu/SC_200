@@ -2,7 +2,6 @@ var user = {}
 
 $('document').ready(function () {
     
-    //This is the old code
     var fetchAccessToken = function (code) {
         $.ajax({
                 url: "https://discordapp.com/api/v6/oauth2/token",
@@ -32,7 +31,7 @@ $('document').ready(function () {
             .fail(function (e) {
                 console.log(e)
                 localStorage.removeItem('user');
-                // window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
+                window.location.replace("https://discordapp.com/api/oauth2/authorize?client_id=570810906079133728&redirect_uri=https%3A%2F%2Flileu.github.io%2FSC_200%2Fdashboard.html&response_type=code&scope=identify%20email%20connections%20guilds");
             })
 
 
@@ -40,7 +39,13 @@ $('document').ready(function () {
 
     if(localStorage.getItem('user') !== null ){
         user = JSON.parse(localStorage.getItem('user'));
-        
+
+        $('#user').text(user.username)
+
+        $('#avatar').attr({
+            src: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
+        })
+
     }
     else{
         const urlParams = new URLSearchParams(window.location.search);
@@ -58,7 +63,6 @@ $('document').ready(function () {
                     'Authorization': `Bearer ${access_token}`
                 }
 
-                // /users/@me/channels
             })
             .then(
                 (resp) => {

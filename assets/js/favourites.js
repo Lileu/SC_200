@@ -15,13 +15,6 @@ $('document').ready(function () {
 
   var database = firebase.database();
   
-  user = JSON.parse(localStorage.getItem('user'));
-
-  $('#user').text(user.username)
-
-  $('#avatar').attr({
-      src: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
-  })
   database.ref(`${user.id}/favourites`).on("value", function (snapshot) {
     ;
     var ids = Object.keys(snapshot.val());
@@ -51,8 +44,9 @@ $('document').ready(function () {
               <div class="col-md-9">
                   <div class="card-body">
                       <h5 class="card-title">${name}</h5>
-                      <p class="card-text price">${price}</p>
-                      <p class="card-text release_date">${release_date}</p>
+                      <p class="card-text price">Price : ${price}</p>
+                      <p class="card-text release_date">Release Data : ${release_date}</p>
+                      <button class="steam-button" onclick=" window.open('https://store.steampowered.com/app/${ids[i]}','_blank')" target="_blank">View in Steam <i class="fa fa-steam" aria-hidden="true"></i></button>
                   </div>
               </div>            
               </div>

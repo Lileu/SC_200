@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+
+
 .preloader{
     display: flex; 
     z-index: 1;
@@ -243,4 +245,10 @@ h2 {
 
 .modal-title    {
     text-align: center;
+}
+
+
+ul{
+    list-style-type: none;
+
 }

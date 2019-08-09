@@ -30,13 +30,17 @@ body {
     text-align: left;
     align-content: left;
     border: 2px solid white;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 9) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: none;
 }
 
-.card:hover {
+.card img{
+    height: 100%;
+}
+
+/* .card:hover {
     box-shadow: 10px 10px 20px rgba(117,78,166,0.7);
     border-color: magenta;
-}
+} */
 
 .image-frame {
     position: relative
@@ -58,4 +62,12 @@ body {
     float: right;
     margin-top: 10%;
     margin-right: 12.5%;
+}
+
+button{
+    background : none;
+    color: white;
+    border: 2px solid white;
+    border-radius : 25px;
+    padding: 5px 20px;
 }
