@@ -30,7 +30,4 @@ $('document').ready(function () {
       })
 
     $('#faves-section').append(appendFave);
-  })
-
-
-});
+  });
