@@ -66,7 +66,7 @@ $('document').ready(function () {
       release_date: release_date
     }
 
-    database.ref(`${user.email.replace('@','').replace('.','')}/favourites/${id}`).set(setObject);
+    database.ref(`${user.id}/favourites/${id}`).set(setObject);
 
   });
 
@@ -115,6 +115,8 @@ $('document').ready(function () {
           resp.forEach((card, index) => {
 
             state.games.push(card);
+
+            <div class="card" id=""></div>
 
             var appendCard = $('<div>').attr({
                 class: 'card',
