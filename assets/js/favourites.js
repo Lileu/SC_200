@@ -1,6 +1,5 @@
 $('document').ready(function () {
 
-
   var firebaseConfig = {
     apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
     authDomain: "dis-connect.firebaseapp.com",
@@ -15,7 +14,7 @@ $('document').ready(function () {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
-
+  
   database.ref(`${user.id}/favourites`).on("value", function (snapshot) {
     ;
     var ids = Object.keys(snapshot.val());
@@ -39,22 +38,21 @@ $('document').ready(function () {
       $('#faves-section').append(
         ` <div class="card mb-3">
           <div class="row no-gutters">
-              <div class="col-md-3">
+              <div class="col-md-3" style="content-align: center;">
                   <img src="${image}" class="card-img" alt="${image}+image">
               </div>
               <div class="col-md-9">
                   <div class="card-body">
                       <h5 class="card-title">${name}</h5>
-                      <p class="card-text price">${price}</p>
-                      <p class="card-text release_date">${release_date}</p>
+                      <p class="card-text price">Price : ${price}</p>
+                      <p class="card-text release_date">Release Data : ${release_date}</p>
+                      <button class="steam-button" onclick=" window.open('https://store.steampowered.com/app/${ids[i]}','_blank')" target="_blank">View in Steam <i class="fa fa-steam" aria-hidden="true"></i></button>
                   </div>
               </div>            
               </div>
           </div>
       </div>`)
     }
-
-    $('#faves-section').append(appendFave);
   });
 
 
