@@ -1,6 +1,5 @@
 $('document').ready(function () {
 
-
   var firebaseConfig = {
     apiKey: "AIzaSyBQfhwOmLs8gR69DQayZ5pZpOpZTq2qw2I",
     authDomain: "dis-connect.firebaseapp.com",
@@ -15,7 +14,14 @@ $('document').ready(function () {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
+  
+  user = JSON.parse(localStorage.getItem('user'));
 
+  $('#user').text(user.username)
+
+  $('#avatar').attr({
+      src: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`
+  })
   database.ref(`${user.id}/favourites`).on("value", function (snapshot) {
     ;
     var ids = Object.keys(snapshot.val());
@@ -39,7 +45,7 @@ $('document').ready(function () {
       $('#faves-section').append(
         ` <div class="card mb-3">
           <div class="row no-gutters">
-              <div class="col-md-3">
+              <div class="col-md-3" style="content-align: center;">
                   <img src="${image}" class="card-img" alt="${image}+image">
               </div>
               <div class="col-md-9">
@@ -53,8 +59,6 @@ $('document').ready(function () {
           </div>
       </div>`)
     }
-
-    $('#faves-section').append(appendFave);
   });
 
 
