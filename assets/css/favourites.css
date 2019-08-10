@@ -33,7 +33,7 @@ body {
     background: none;
 }
 
-.card img{
+.card img {
     height: 100%;
 }
 
@@ -64,10 +64,18 @@ body {
     margin-right: 12.5%;
 }
 
-button{
-    background : none;
+button {
+    background: none;
     color: white;
     border: 2px solid white;
-    border-radius : 25px;
+    border-radius: 25px;
     padding: 5px 20px;
+}
+
+.remove-fav {
+    border-color: orangered;
+}
+
+.hide {
+    display: none;
 }
