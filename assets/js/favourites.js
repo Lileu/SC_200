@@ -14,7 +14,7 @@ $('document').ready(function () {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
-  
+
   database.ref(`${user.id}/favourites`).on("value", function (snapshot) {
     ;
     var ids = Object.keys(snapshot.val());
@@ -35,8 +35,11 @@ $('document').ready(function () {
       console.log(release_date);
 
 
+      // $('.card').on('dblclick', function () {
+      //     $(this).removeClass('heart-anim');
+
       $('#faves-section').append(
-        ` <div class="card mb-3">
+        ` <div class="card mb-3" id="card-${ids[i]}">
           <div class="row no-gutters">
               <div class="col-md-3" style="content-align: center;">
                   <img src="${image}" class="card-img" alt="${image}+image">
@@ -47,6 +50,7 @@ $('document').ready(function () {
                       <p class="card-text price">Price : ${price}</p>
                       <p class="card-text release_date">Release Data : ${release_date}</p>
                       <button class="steam-button" onclick=" window.open('https://store.steampowered.com/app/${ids[i]}','_blank')" target="_blank">View in Steam <i class="fa fa-steam" aria-hidden="true"></i></button>
+                      <button class="remove-fav" value=${ids[i]}>Remove favourite </button>
                   </div>
               </div>            
               </div>
@@ -54,6 +58,13 @@ $('document').ready(function () {
       </div>`)
     }
   });
+
+  $('#faves-section').on('click', '.remove-fav', function () {
+    var index = $(this).attr('value');
+    database.ref(`${user.id}/favourites/${index}`).remove();
+    window.location.reload();
+
+  })
 
 
 });
